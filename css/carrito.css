@@ -1,0 +1,73 @@
+/* ==================== CARRITO (NUEVO DISEÑO) ==================== */
+.carrito {
+    position: fixed;
+    /* CAMBIO CLAVE: Lo mandamos abajo a la derecha */
+    bottom: 30px;
+    right: 30px;
+    top: auto;      /* Importante: Anulamos el 'top' anterior */
+    left: auto;     /* Importante: Anulamos el 'left' anterior */
+    
+    width: 320px;
+    background: rgba(13, 13, 20, 0.95); /* Fondo oscuro estilo gamer */
+    backdrop-filter: blur(10px);
+    border: 2px solid var(--neon-green); /* Borde neón */
+    border-radius: 12px;
+    padding: 1.5rem;
+    
+    /* Sombra para que destaque sobre el fondo */
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.2);
+    
+    z-index: 9999; /* Para que siempre esté por encima de todo */
+    max-height: 400px;
+    overflow-y: auto;
+    transition: all 0.3s ease;
+}
+
+/* Título "Tu carrito" */
+.carrito h3 {
+    font-family: 'Orbitron', sans-serif; /* <--- AQUÍ CAMBIAMOS LA FUENTE */
+    color: var(--neon-green);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+    text-shadow: 0 0 5px rgba(57, 255, 20, 0.5);
+}
+
+/* Texto "El carrito está vacío" y precios */
+.carrito p, .carrito div {
+    font-family: 'Rajdhani', sans-serif; /* <--- AQUÍ CAMBIAMOS LA FUENTE DEL TEXTO */
+    color: #fff;
+    font-size: 1.1rem;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* Estilo para cada producto dentro del carrito */
+.carrito > div {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    border-left: 3px solid var(--neon-green);
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Enlace de Eliminar */
+.carrito a {
+    color: #ff4d4d;
+    font-size: 0.9rem;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Orbitron', sans-serif;
+    margin-left: 10px;
+}
+
+.carrito a:hover {
+    text-decoration: underline;
+    text-shadow: 0 0 5px #ff4d4d;
+}
